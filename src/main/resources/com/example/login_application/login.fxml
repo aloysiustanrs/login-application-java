@@ -1,31 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
-
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.PasswordField?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.Color?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="500.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.login_application.LoginController">
-      <Label layoutX="150.0" layoutY="104.0" text="Login Application">
-         <font>
+<AnchorPane prefHeight="500.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.login_application.LoginController" style="-fx-background-color: #f5f5f5;">
+    <Label layoutX="150.0" layoutY="104.0" text="Login Application" textFill="#336699">
+        <font>
             <Font name="System Bold" size="48.0" />
-         </font>
-      </Label>
-      <TextField fx:id="username_input" layoutX="221.0" layoutY="213.0" prefHeight="25.0" prefWidth="258.0" promptText="Username">
-         <font>
+        </font>
+    </Label>
+    <TextField fx:id="username_input" layoutX="221.0" layoutY="213.0" prefHeight="25.0" prefWidth="258.0" promptText="Username" style="-fx-background-color: #ffffff; -fx-text-fill: #333333; -fx-border-color: #999999; -fx-border-width: 1px;">
+        <font>
             <Font size="15.0" />
-         </font>
-      </TextField>
-      <PasswordField fx:id="password_input" layoutX="221.0" layoutY="264.0" prefHeight="31.0" prefWidth="258.0" promptText="Password">
-         <font>
+        </font>
+    </TextField>
+    <PasswordField fx:id="password_input" layoutX="221.0" layoutY="264.0" prefHeight="31.0" prefWidth="258.0" promptText="Password" style="-fx-background-color: #ffffff; -fx-text-fill: #333333; -fx-border-color: #999999; -fx-border-width: 1px;">
+        <font>
             <Font size="15.0" />
-         </font>
-      </PasswordField>
-      <Button layoutX="279.0" layoutY="329.0" mnemonicParsing="false" onAction="#loginCheck" prefWidth="141.0" text="Login">
-         <font>
+        </font>
+    </PasswordField>
+    <Button layoutX="279.0" layoutY="329.0" mnemonicParsing="false" onAction="#loginCheck" prefWidth="141.0" text="Login" style="-fx-background-color: #336699; -fx-text-fill: #ffffff;">
+        <font>
             <Font size="15.0" />
-         </font>
-      </Button>
+        </font>
+    </Button>
 </AnchorPane>

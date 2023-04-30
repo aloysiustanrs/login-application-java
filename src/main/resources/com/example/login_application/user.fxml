@@ -5,9 +5,8 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="500.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.login_application.UserPageController">
-
-    <Label layoutX="237.0" layoutY="115.0" text="User page">
+<AnchorPane prefHeight="500.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.login_application.UserPageController" style="-fx-background-color: #f5f5f5;">
+    <Label layoutX="237.0" layoutY="115.0" text="User page" textFill="#336699">
         <font>
             <Font name="System Bold" size="48.0" />
         </font>
