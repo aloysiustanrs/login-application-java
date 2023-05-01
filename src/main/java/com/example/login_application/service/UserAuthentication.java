@@ -16,26 +16,26 @@ public class UserAuthentication {
 
     public ArrayList<Boolean> loginAuthentication(String username, String password){
 //        Return [ login successful? , is Manager ? ]
-        ArrayList<Boolean> set = new ArrayList<>();
+        ArrayList<Boolean> list = new ArrayList<>();
         User currUser = repo.getUserByUsername(username);
 
 //        add login successful or not at index 0 of set
         if (currUser != null && currUser.getPassword().equals(password)){
-            set.add(true);
+            list.add(true);
         }
         else{
-            set.add(false);
+            list.add(false);
         }
 
 //        add manager or not at index 1 of set
         if (currUser!= null && currUser.isManager()){
-            set.add(true);
+            list.add(true);
         }
         else{
-            set.add(false);
+            list.add(false);
         }
 
-        return set;
+        return list;
     }
 
 }

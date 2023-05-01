@@ -24,7 +24,7 @@ public class LoginController{
 
     public static User currUser;
 
-    //Create a stage object
+    // Create a stage object and get the mainStage from the Application.java file
     public static Stage mainStage;
 
     public void setStage(Stage stage) {
@@ -45,17 +45,21 @@ public class LoginController{
 
         if (loginSuccessful){
 
+
+            // if login successful , means the login details is correct ,currUser is updated
             UserRepository repo = new UserRepository();
             currUser = repo.getUserByUsername(username_check);
 
-            if (isManager){
 
+//           If the user is a manager, load manager page
+            if (isManager){
                 Parent root = FXMLLoader.load(getClass().getResource("/com/example/login_application/manager.fxml"));
                 Scene scene = new Scene(root, 700, 500);
                 mainStage.setTitle("Manager");
                 mainStage.setScene(scene);
                 mainStage.show();
             }
+//            else , load user page
             else{
 
                 Parent root = FXMLLoader.load(getClass().getResource("/com/example/login_application/user.fxml"));

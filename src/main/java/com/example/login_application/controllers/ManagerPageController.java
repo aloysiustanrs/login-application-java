@@ -22,6 +22,8 @@ public class ManagerPageController implements Initializable {
     @FXML
     private Label manager_username;
 
+//    Load name and username to page
+
     @FXML
     protected void loadUserData() {
         manager_username.setText(currUser.getUsername());
