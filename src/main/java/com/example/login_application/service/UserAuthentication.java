@@ -5,16 +5,16 @@ import com.example.login_application.repository.UserRepository;
 
 import java.util.ArrayList;
 
-public class UserService {
+public class UserAuthentication {
 
     private UserRepository repo;
 
-    public UserService(){
+    public UserAuthentication(){
         repo = new UserRepository();
 
     }
 
-    public ArrayList<Boolean> loginSuccessAndIsManagerCheck(String username, String password){
+    public ArrayList<Boolean> loginAuthentication(String username, String password){
 //        Return [ login successful? , is Manager ? ]
         ArrayList<Boolean> set = new ArrayList<>();
         User currUser = repo.getUserByUsername(username);

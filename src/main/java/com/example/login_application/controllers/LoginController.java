@@ -3,7 +3,7 @@ package com.example.login_application.controllers;
 
 import com.example.login_application.model.User;
 import com.example.login_application.repository.UserRepository;
-import com.example.login_application.service.UserService;
+import com.example.login_application.service.UserAuthentication;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -22,10 +22,7 @@ public class LoginController{
     @FXML
     private TextField username_input;
 
-
-
     public static User currUser;
-
 
     //Create a stage object
     public static Stage mainStage;
@@ -39,9 +36,9 @@ public class LoginController{
         String username_check = username_input.getText().trim();
         String password_check = password_input.getText().trim();
 
-        UserService userService = new UserService();
+        UserAuthentication userAuthentication = new UserAuthentication();
 
-        ArrayList<Boolean> loginResult = userService.loginSuccessAndIsManagerCheck(username_check,password_check);
+        ArrayList<Boolean> loginResult = userAuthentication.loginAuthentication(username_check,password_check);
 
         boolean loginSuccessful = loginResult.get(0);
         boolean isManager = loginResult.get(1);
