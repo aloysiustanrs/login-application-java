@@ -1,7 +1,4 @@
-package com.example.login_application;
-
-import java.util.ArrayList;
-import java.util.HashMap;
+package com.example.login_application.model;
 
 public class User {
     private String username;

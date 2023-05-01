@@ -1,7 +1,9 @@
-package com.example.login_application;
+package com.example.login_application.service;
+
+import com.example.login_application.model.User;
+import com.example.login_application.repository.UserRepository;
 
 import java.util.ArrayList;
-import java.util.HashSet;
 
 public class UserService {
 

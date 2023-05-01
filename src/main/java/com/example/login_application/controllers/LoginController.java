@@ -1,6 +1,9 @@
-package com.example.login_application;
+package com.example.login_application.controllers;
 
 
+import com.example.login_application.model.User;
+import com.example.login_application.repository.UserRepository;
+import com.example.login_application.service.UserService;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -50,7 +53,7 @@ public class LoginController{
 
             if (isManager){
 
-                Parent root = FXMLLoader.load(getClass().getResource("manager.fxml"));
+                Parent root = FXMLLoader.load(getClass().getResource("/com/example/login_application/manager.fxml"));
                 Scene scene = new Scene(root, 700, 500);
                 mainStage.setTitle("Manager");
                 mainStage.setScene(scene);
@@ -58,7 +61,7 @@ public class LoginController{
             }
             else{
 
-                Parent root = FXMLLoader.load(getClass().getResource("user.fxml"));
+                Parent root = FXMLLoader.load(getClass().getResource("/com/example/login_application/user.fxml"));
                 Scene scene = new Scene(root, 700, 500);
 
 

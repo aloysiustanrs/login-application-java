@@ -1,4 +1,6 @@
-package com.example.login_application;
+package com.example.login_application.repository;
+
+import com.example.login_application.model.User;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -17,11 +19,7 @@ public class UserRepository {
                     user.setUsername(resultSet.getString("username"));
                     user.setPassword(resultSet.getString("password"));
                     int managerValue = Integer.parseInt(resultSet.getString("manager"));
-                    if (managerValue == 0){
-                        user.setManager(false);
-                    }else{
-                        user.setManager(true);
-                    }
+                    user.setManager(managerValue != 0);
                     user.setName(resultSet.getString("name"));
                     return user;
                 }

@@ -1,4 +1,4 @@
-package com.example.login_application;
+package com.example.login_application.repository;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
